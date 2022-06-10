@@ -1,0 +1,5 @@
+<input type="text" [formControl]="searchControl">
+
+<div *ngFor="let product of displayProducts" (click)="openProduct(product)">
+  <app-product [name]="product.name" [price]="product.price" [image]="product.image"></app-product>
+</div>
