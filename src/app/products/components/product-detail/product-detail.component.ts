@@ -12,14 +12,9 @@ import { FormControl } from '@angular/forms';
 })
 export class ProductDetailComponent implements OnInit {
   product: Product;
-  product$: Observable<Product>;
   constructor(private activatedRoute: ActivatedRoute, private productsService: ProductsService) { }
 
   ngOnInit(): void {
-
-
-
-
     this.activatedRoute.paramMap
       .pipe(
         mergeMap(paramMap => {

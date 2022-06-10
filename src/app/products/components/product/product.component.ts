@@ -10,12 +10,10 @@ export class ProductComponent implements OnInit {
   @Input() name: string;
   @Input() price: number;
   @Input() image: string;
-  safeImage: SafeUrl;
 
-  constructor(private domSanitizer: DomSanitizer) { }
+  constructor() { }
 
   ngOnInit(): void {
-    this.safeImage = this.domSanitizer.bypassSecurityTrustUrl(this.image);
   }
 
 }
